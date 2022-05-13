@@ -8,5 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     //사용자 정의 
-    <color name="bgColor">#b0c4b1</color>
+    <color name="bgColor">#edafb8</color>
+    <color name="txtColor">#4A5759</color>
+    <color name="btnBgColor">#f7e1d7</color>
+    <color name="btntxtColor">#4a5759</color>
+
+
 </resources>
