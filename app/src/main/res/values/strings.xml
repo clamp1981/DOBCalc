@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DOBCalc</string>
+    <string name="app_name">Age In Minutes</string>
     <string name="main_title">CALCULATOR YOUR</string>
     <string name="sub_title">IN MINUTES</string>
     <string name="age_title">AGE</string>

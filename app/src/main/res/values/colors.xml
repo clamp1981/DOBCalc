@@ -7,11 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    //사용자 정의 
+    //사용자 정의
+    <color name="topColor">#fb6f92</color>
     <color name="bgColor">#edafb8</color>
     <color name="txtColor">#4A5759</color>
     <color name="btnBgColor">#f7e1d7</color>
-    <color name="btntxtColor">#4a5759</color>
+    <color name="btnTxtColor">#e56b6f</color>
+    <color name="slectedTxtColor">#bcb8b1</color>
+
+
 
 
 </resources>
