@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private var tvSelectedDate : TextView? = null
     private var tvAgeInMinutes : TextView? = null
+    private var tvAgeInDay : TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         tvSelectedDate = findViewById(R.id.tvSelectedDate)
         tvAgeInMinutes = findViewById(R.id.tvAgeInMin)
+        tvAgeInDay = findViewById(R.id.tvAgeInDay)
 
         initAgeInMinutes()
 
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         tvSelectedDate?.text = currentDate
         tvAgeInMinutes?.text = calculateAgeInMinutes( currentDate ).toString()
+        tvAgeInDay?.text = calculateAgeInDay( currentDate ).toString()
 
     }
 
@@ -52,6 +55,7 @@ class MainActivity : AppCompatActivity() {
                 val selectedDate = "$selectedDay/${selectedMonth + 1 }/ $selectedYear"
                 tvSelectedDate?.text = selectedDate
                 tvAgeInMinutes?.text = calculateAgeInMinutes( selectedDate ).toString()
+                tvAgeInDay?.text = calculateAgeInDay( selectedDate ).toString()
 
             }
             ,year
@@ -70,5 +74,9 @@ class MainActivity : AppCompatActivity() {
         val currentDateInMin = sdf.parse(sdf.format(System.currentTimeMillis())).time.div(60000 )
         return currentDateInMin - selectedDateInMin
 
+    }
+
+    private fun calculateAgeInDay ( selectedDate : String) : Long {
+        return (calculateAgeInMinutes(selectedDate) / 60) / 24
     }
 }
